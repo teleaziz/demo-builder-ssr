@@ -65,7 +65,11 @@ export default function Page({
       {show404 ? (
         <DefaultErrorPage statusCode={404} />
       ) : (
-        <BuilderComponent model="page" content={page} />
+        <BuilderComponent
+          model="page"
+          content={page}
+          options={{ includeRefs: true }}
+        />
       )}
     </>
   )
